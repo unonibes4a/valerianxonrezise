@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
         * {
           box-sizing: border-box;
@@ -486,7 +486,7 @@ width: 100%;
 height: 100%;
 
   z-index: 122; 
-  background-color: #ffffff;
+  background-color: #893591;
 
 
 
@@ -621,7 +621,15 @@ height: 100px;
 }
 
 
+.cldivcursos{
+position: absolute;
+top: 10%;
+left: 10%;
+width: 80%;
+height: 80%;
+background-color: #751313;
 
+}
 
 
 </style>  <script src="jquery-3.2.1.min.js" ></script>
@@ -937,13 +945,16 @@ var vlp=0.0;
         var vh=window.innerHeight;
      
 function fonresize(){
-  alert(333);
+
      vw=window.innerWidth;
      vh=window.innerHeight;
+
+     
      document.getElementById("idtodoelmundo").style.height=String(vh*vhp)+"px";
     document.getElementById("idtodoelmundo").style.width=String(vw*vwp)+"px";
     document.getElementById("idtodoelmundo").style.left=String(vw*vlp)+"px";
-    dodnevaelvideo()
+    dodnevaelvideo();
+  //  alert(vw);
 }
 function iniciunoves(){
  vw=window.innerWidth;
@@ -1593,8 +1604,16 @@ document.getElementById("idponertodo").style.top=String(vh*0.000051)+"px";
 <div id="idcursospanel1">
 
   
-  <div ></div>
+  <div class="cldivcursos" >
 
+      <iframe id="idpeliculasvisor2" class="idiframemivideo"
+      src="https://drive.google.com/file/d/11Pv1lwaODCjRYlBpG1MlXpEZEmFjLXlH/preview?authuser=0"
+       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><div id="idocultaeso"></div></iframe>
+                  
+
+ 
+  </div>
+  
 
 </div>
 
