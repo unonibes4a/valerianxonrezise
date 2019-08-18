@@ -383,17 +383,12 @@ opacity: 0.3;
         width: 100%;
       
         height: 70px;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(143, 0, 0);
         z-index: 1;
       }
 
       .idiframemivideo{
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
+  
       }
 #idocultaeso2{
 position: absolute;
@@ -410,7 +405,7 @@ position: absolute;
  width:20%;
  height: 70px; 
 z-index: 10;
-background-color: #000000;
+background-color: #c50000;
 
 
 }
@@ -898,7 +893,7 @@ traejsonimgpautas1();
 
 
 <script>
-
+ var cambiaaltopantaala=1.777777778;
     
 function fmostraridpdescursos(){
 
@@ -1568,7 +1563,7 @@ ocultardiv("idponertodo");
 
 function  dodnevaelvideo(){
     vw=window.innerWidth;
-  vh=window.innerHeight;
+  vh=window.innerHeight;/*
 if(vw>5000<=6250){
 
     document.getElementById("idponertodo").style.height=String(vh*0.8)+"px";
@@ -1594,28 +1589,65 @@ document.getElementById("idponertodo").style.left=String(vw*0.15)+"px";
 document.getElementById("idponertodo").style.top=String(vh*0.000051)+"px";
 
 }
+*/
+
+if(vw>vh){
+  cambiaaltopantaala=1.777777778;
+  document.getElementById("idponertodo").style.position="absolute";
+  document.getElementById("idponertodo").style.left=String((vw*(1-(cambiaaltopantaala*vh/vw)))/2)+"px";
+document.getElementById("idponertodo").style.top=String((vh*(1-(1/cambiaaltopantaala*vw/vh)))/2)+"px";
+document.getElementById("idponertodo").style.height=String(((1/cambiaaltopantaala*vw)))+"px";
+document.getElementById("idponertodo").style.width=String(cambiaaltopantaala*vh)+"px";
+/*
+document.getElementById("idponertodo").style.position="absolute";
+  document.getElementById("idponertodo").style.left=String(0)+"px";
+document.getElementById("idponertodo").style.top=String(0)+"px";
+document.getElementById("idpeliculasvisor").style.height=document.getElementById("idponertodo").style.height;
+document.getElementById("idpeliculasvisor").style.width=document.getElementById("idponertodo").style.width;
+
+
+*/
 }
 
 
+if(vw<=vh){
+
+  cambiaaltopantaala=1.801886792;
+  document.getElementById("idponertodo").style.position="absolute";
+  document.getElementById("idponertodo").style.left=String(0)+"px";
+document.getElementById("idponertodo").style.top=String((vh*(1-((1/cambiaaltopantaala*vw))/vh))/2)+"px";
+
+
+
+document.getElementById("idponertodo").style.height=String(((1/cambiaaltopantaala*vw)))+"px";
+document.getElementById("idponertodo").style.width=String(vw)+"px";
+
+/*
+
+document.getElementById("idpeliculasvisor").style.position="absolute";
+document.getElementById("idpeliculasvisor").style.left=String(vw*(1-(cambiaaltopantaala*vh/vw)))+"px";
+  document.getElementById("idpeliculasvisor").style.top=String((vh*((1-(1/cambiaaltopantaala*vw/vh))))/2)+"px";
+
+
+document.getElementById("idpeliculasvisor").style.height=String(168)+"px";
+document.getElementById("idpeliculasvisor").style.width=String(cambiaaltopantaala*((1/cambiaaltopantaala*vw)))+"px";
+alert(((1/cambiaaltopantaala*vw))+"  "+ cambiaaltopantaala*((1/cambiaaltopantaala*vw))+"   "+ document.getElementById("idponertodo").style.width);
+*/
+}
+
+
+
+
+
+
+
+}
+
+fonresize();
 </script>
 
 
 
-<div id="idcursospanel1">
-
-  
-  <div class="cldivcursos" >
-
-      <iframe id="idpeliculasvisor2" class="idiframemivideo"
-      src="https://drive.google.com/file/d/11Pv1lwaODCjRYlBpG1MlXpEZEmFjLXlH/preview?authuser=0"
-       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><div id="idocultaeso"></div></iframe>
-                  
-
- 
-  </div>
-  
-
-</div>
 
 
 
